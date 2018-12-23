@@ -9,7 +9,14 @@ public class Exercise4 {
         } else {
             System.out.println("OK !");
         }
+
         rotateToLeft(3,theString);
+        System.out.println(theString);
+
+        rotateToRight(3, theString);
+        System.out.println(theString);
+
+
 
     }
 
@@ -23,9 +30,14 @@ public class Exercise4 {
     }
 
     private static void rotateToLeft(int nbChar, String theString){
-        for(int i = 0; i < nbChar; i++){
-            theString = (theString.substring(1)).concat(theString.substring(0,1));
+        for(int i = 0; i < nbChar; i++) {
+            theString = (theString.substring(1)).concat(theString.substring(0, 1));
         }
-        System.out.println(theString);
+    }
+
+    private static void rotateToRight(int nbChar, String theString){
+        for(int i = 0; i < nbChar; i++) {
+            theString = (theString.substring(theString.length() - 1)).concat(theString.substring(0, theString.length()-2));
+        }
     }
 }
